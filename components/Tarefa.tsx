@@ -1,11 +1,15 @@
 import { Text, StyleSheet, View, Button } from "react-native";
 import _tarefa from "../types/tarefa";
 
-export default function Tarefa(props:{
+
+type _tarefaProps={
     dados:_tarefa, 
-    handleDeletePress: any
+    handleDeletePress: any,
     handleConcluidoPress:any
-}){
+};
+
+
+export default function Tarefa(props:_tarefaProps){
     let estilo;
     if(props.dados.concluida){
         estilo = [styles.tarefaConcluida];
